@@ -6,13 +6,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.nazabu.androidstudy"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -50,6 +49,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
 
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
+
     // compose
     implementation 'androidx.compose.ui:ui:1.0.1'
     // Tooling support (Previews, etc.)
@@ -71,9 +73,12 @@ dependencies {
     // Integration with observables
     implementation 'androidx.compose.runtime:runtime-livedata:1.0.1'
     implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.1'
+    // Accompanists
+    implementation 'com.google.accompanist:accompanist-insets:0.16.0'
+    implementation 'com.google.accompanist:accompanist-systemuicontroller:0.16.0'
 
-    implementation "com.google.dagger:hilt-android:2.38.1"
-    kapt "com.google.dagger:hilt-compiler:2.38.1"
+    implementation 'androidx.navigation:navigation-compose:2.4.0-alpha07'
+    implementation "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
