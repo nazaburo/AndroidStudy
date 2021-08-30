@@ -5,7 +5,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,7 +20,7 @@ fun GreetingScreen(
     openDrawer: () -> Unit,
     scaffoldState: ScaffoldState = rememberScaffoldState()
 ) {
-    val greeting = viewModel.greeting.observeAsState()
+    val greeting = viewModel.greeting.collectAsState()
 
     GreetingScreen(
         man = greeting.value,
