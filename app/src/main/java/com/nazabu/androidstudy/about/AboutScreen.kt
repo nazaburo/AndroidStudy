@@ -16,7 +16,7 @@ fun AboutScreen(
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = {
-            val title = stringResource(id = R.string.app_name)
+            val title = stringResource(id = R.string.about_title)
             InsetAwareTopAppBar(
                 title = { Text(text = title) },
                 navigationIcon = {
