@@ -24,6 +24,7 @@ fun AppDrawer(
     currentRoute: String,
     navigateToHome: () -> Unit,
     navigateToAbout: () -> Unit,
+    navigateToXml: () -> Unit,
     closeDrawer: () -> Unit
 ) {
 
@@ -46,6 +47,16 @@ fun AppDrawer(
             isSelected = currentRoute == MainDestinations.ABOUT,
             action = {
                 navigateToAbout()
+                closeDrawer()
+            }
+        )
+
+        DrawerButton(
+            icon = Icons.Filled.Android,
+            label = stringResource(id = R.string.xml_activity),
+            isSelected = false,
+            action = {
+                navigateToXml()
                 closeDrawer()
             }
         )
@@ -122,7 +133,8 @@ fun PreviewAppDrawer() {
                 currentRoute = MainDestinations.HOME_ROUTE,
                 navigateToHome = {},
                 navigateToAbout = {},
-                closeDrawer = { }
+                navigateToXml = {},
+                closeDrawer = {}
             )
         }
     }

@@ -6,4 +6,7 @@
 
     <!-- About Screen -->
     <string name="about_title">About</string>
+
+    <!-- Xml Activity -->
+    <string name="xml_activity">XML Activity</string>
 </resources>
