@@ -7,6 +7,7 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.insets.ProvideWindowInsets
@@ -29,6 +30,7 @@ fun MyApp() {
             val scaffoldState = rememberScaffoldState()
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route ?: MainDestinations.HOME_ROUTE
+            val context = LocalContext.current
 
             Scaffold(
                 scaffoldState = scaffoldState,
@@ -37,6 +39,7 @@ fun MyApp() {
                         currentRoute = currentRoute,
                         navigateToHome = { navController.navigate(MainDestinations.HOME_ROUTE) },
                         navigateToAbout = { navController.navigate(MainDestinations.ABOUT) },
+                        navigateToXml = { context.startActivity(XmlActivity.createIntent(context)) },
                         closeDrawer = { coroutineScope.launch { scaffoldState.drawerState.close() } }
                     )
                 }

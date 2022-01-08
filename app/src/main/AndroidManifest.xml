@@ -21,7 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ui.XmlActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AndroidStudy.NoActionBar" />
         <service android:name=".MyLifeCycleService" />
     </application>
 
