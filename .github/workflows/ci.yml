@@ -16,6 +16,7 @@ on:
       - docs/**
       - README.md
       - LICENSE
+  workflow_dispatch:
 
 jobs:
   build:
