@@ -47,6 +47,9 @@ jobs:
       - name: Run Compile
         run: ./gradlew assembleDebug
 
+      - name: Get color
+        run: echo "test"
+
   test:
     runs-on: macos-latest
     steps:
