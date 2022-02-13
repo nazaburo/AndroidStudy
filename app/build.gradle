@@ -120,6 +120,10 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.5'
 }
 
+kapt {
+    correctErrorTypes true
+}
+
 //apply from: './jacoco.gradle'
 
 task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
