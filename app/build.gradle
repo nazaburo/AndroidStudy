@@ -84,7 +84,7 @@ dependencies {
     // compose
     implementation 'androidx.compose.ui:ui:1.0.5'
     // Tooling support (Previews, etc.)
-    implementation 'androidx.compose.ui:ui-tooling:1.0.5'
+    implementation 'androidx.compose.ui:ui-tooling:1.1.0'
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
     implementation 'androidx.compose.foundation:foundation:1.0.5'
     // Material Design
@@ -118,6 +118,10 @@ dependencies {
 
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.5'
+}
+
+kapt {
+    correctErrorTypes true
 }
 
 //apply from: './jacoco.gradle'
