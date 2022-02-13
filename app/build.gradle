@@ -107,7 +107,7 @@ dependencies {
     implementation 'com.google.accompanist:accompanist-insets:0.16.0'
     implementation 'com.google.accompanist:accompanist-systemuicontroller:0.16.0'
 
-    implementation 'androidx.navigation:navigation-compose:2.4.0-rc01'
+    implementation 'androidx.navigation:navigation-compose:2.5.0-alpha02'
     implementation "androidx.hilt:hilt-navigation-compose:1.0.0-rc01"
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
@@ -118,6 +118,10 @@ dependencies {
 
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.5'
+}
+
+kapt {
+    correctErrorTypes true
 }
 
 //apply from: './jacoco.gradle'
