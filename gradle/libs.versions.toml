@@ -1,0 +1,69 @@
+[versions]
+kotlin = '1.6.10'
+
+hilt = '2.40.5'
+compose = '1.1.0'
+lifecycle = '2.4.1'
+accompanist = '0.16.0'
+
+jacoco = '0.8.7'
+
+[libraries]
+android-pluginGradle = 'com.android.tools.build:gradle:7.1.1'
+kotlin-pluginGradle = { module = 'org.jetbrains.kotlin:kotlin-gradle-plugin', version.ref = 'kotlin' }
+hilt-pluginGradle = { module = 'com.google.dagger:hilt-android-gradle-plugin', version.ref = 'hilt' }
+detect-pluginGradle = 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.19.0'
+google-services-pluginGradle = 'com.google.gms:google-services:4.3.10'
+jacoco-pluginGradle = { module = 'org.jacoco:org.jacoco.core', version.ref = 'jacoco' }
+
+kotlin = { module = 'org.jetbrains.kotlin:kotlin-stdlib', version.ref = 'kotlin' }
+
+androidx-core = 'androidx.core:core-ktx:1.7.0'
+androidx-appcompat = 'androidx.appcompat:appcompat:1.4.1'
+androidx-constraintlayout = 'androidx.constraintlayout:constraintlayout:2.1.3'
+androidx-lifecycle = { module = 'androidx.lifecycle:lifecycle-livedata-ktx', version.ref = 'lifecycle' }
+androidx-lifecycle-viewmodel = { module = 'androidx.lifecycle:lifecycle-viewmodel-ktx', version.ref = 'lifecycle' }
+androidx-lifecycle-viewmodel-compose = { module = 'androidx.lifecycle:lifecycle-viewmodel-compose', version.ref = 'lifecycle' }
+
+androidx-compose-ui = { module = 'androidx.compose.ui:ui', version.ref = 'compose' }
+androidx-compose-tooling = { module = 'androidx.compose.ui:ui-tooling', version.ref = 'compose' }
+androidx-compose-foundation = { module = 'androidx.compose.foundation:foundation', version.ref = 'compose' }
+androidx-compose-material = { module = 'androidx.compose.material:material', version.ref = 'compose' }
+androidx-compose-animation = { module = 'androidx.compose.animation:animation', version.ref = 'compose' }
+androidx-compose-icons-core = { module = 'androidx.compose.material:material-icons-core', version.ref = 'compose' }
+androidx-compose-icons-extended = { module = 'androidx.compose.material:material-icons-extended', version.ref = 'compose' }
+androidx-compose-livedata = { module = 'androidx.compose.runtime:runtime-livedata', version.ref = 'compose' }
+androidx-compose-rx = { module = 'androidx.compose.runtime:runtime-rxjava2', version.ref = 'compose' }
+
+androidx-compose-activity = 'androidx.activity:activity-compose:1.4.0'
+
+navigation-compose = 'androidx.navigation:navigation-compose:2.5.0-alpha02'
+hilt-navigation-compose = 'androidx.hilt:hilt-navigation-compose:1.0.0'
+
+androidx-lifecycle-extensions = 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+material = 'com.google.android.material:material:1.5.0'
+
+accompanist-insets = { module = 'com.google.accompanist:accompanist-insets', version.ref = 'accompanist' }
+accompanist-systemuicontroller = { module = 'com.google.accompanist:accompanist-systemuicontroller', version.ref = 'accompanist' }
+
+firebase-bom = 'com.google.firebase:firebase-bom:29.0.3'
+firebase-analytics = { module = 'com.google.firebase:firebase-analytics-ktx' }
+
+hilt-android = { module = 'com.google.dagger:hilt-android', version.ref = 'hilt' }
+hilt-compiler = { module = 'com.google.dagger:hilt-compiler', version.ref = 'hilt' }
+
+timber = 'com.jakewharton.timber:timber:5.0.1'
+
+junit = 'junit:junit:4.+'
+androidx-test = 'androidx.test.ext:junit:1.1.3'
+androidx-test-espress = 'androidx.test.espresso:espresso-core:3.4.0'
+androidx-test-compose = 'androidx.compose.ui:ui-test-junit4:1.1.0'
+
+[bundles]
+compose = ['androidx-compose-ui', 'androidx-compose-tooling', 'androidx-compose-foundation',
+    'androidx-compose-material', 'androidx-compose-animation', 'androidx-compose-icons-core',
+    'androidx-compose-icons-extended', 'androidx-compose-activity',
+    'androidx-compose-livedata', 'androidx-compose-rx']
+lifecycle = ['androidx-lifecycle-viewmodel', 'androidx-lifecycle-viewmodel-compose']
+accompanist = ['accompanist-insets', 'accompanist-systemuicontroller']
