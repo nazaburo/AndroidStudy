@@ -24,6 +24,7 @@ androidx-constraintlayout = 'androidx.constraintlayout:constraintlayout:2.1.3'
 androidx-lifecycle = { module = 'androidx.lifecycle:lifecycle-livedata-ktx', version.ref = 'lifecycle' }
 androidx-lifecycle-viewmodel = { module = 'androidx.lifecycle:lifecycle-viewmodel-ktx', version.ref = 'lifecycle' }
 androidx-lifecycle-viewmodel-compose = { module = 'androidx.lifecycle:lifecycle-viewmodel-compose', version.ref = 'lifecycle' }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 
 androidx-compose-ui = { module = 'androidx.compose.ui:ui', version.ref = 'compose' }
 androidx-compose-tooling = { module = 'androidx.compose.ui:ui-tooling', version.ref = 'compose' }
