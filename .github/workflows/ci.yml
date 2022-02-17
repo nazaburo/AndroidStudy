@@ -69,9 +69,9 @@ jobs:
 
       # Execute unit tests
       - name: Unit Test with Android Emulator Runner
-        uses: ReactiveCircus/android-emulator-runner@v2.14.3
+        uses: ReactiveCircus/android-emulator-runner@v2
         with:
-          api-level: 31
+          api-level: 
           script: ./gradlew connectedCheck
           #./gradlew createDebugCoverageReport:
 
