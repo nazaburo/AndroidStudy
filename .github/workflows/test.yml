@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "ENV_1=main" >> $GITHUB_ENV
-        if: github.ref == 'refs/heads/master'
-      - run: echo "ENV_1=main2" >> $GITHUB_ENV
-        if: github.ref == 'refs/heads/main2'
-      - run: echo "branch=$ENV_1"
+      - run: echo "$DISTRIBUTION_NAME=${{ github.head_ref }}" >> $GITHUB_ENV
+        if: ${{ github.event_name == 'pull_request' }}
+      - run: echo "$DISTRIBUTION_NAME=${{ steps.extract_branch.outputs.branch }}" >> $GITHUB_ENV
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+      - run: echo "name=$DISTRIBUTION_NAME"
