@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo "ENV_1=main" >> $GITHUB_ENV
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
       - run: echo "ENV_1=main2" >> $GITHUB_ENV
         if: github.ref == 'refs/heads/main2'
       - run: echo "branch=$ENV_1"
