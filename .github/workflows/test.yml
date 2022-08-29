@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: echo "${GITHUB_REF#refs/heads/}" # PRの番号が取得されてしまいます
+      - run: echo "${GITHUB_HEAD_REF}"
+      - run: echo "${{ github.ref }}"
       - run: echo "DISTRIBUTION_NAME=${{ github.head_ref }}" >> $GITHUB_ENV
         if: ${{ github.event_name == 'pull_request' }}
       - run: echo "DISTRIBUTION_NAME=$(echo ${$GITHUB_REF})" >> $GITHUB_ENV
