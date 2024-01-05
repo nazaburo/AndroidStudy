@@ -41,7 +41,6 @@ jobs:
           head: release/v${{ github.event.inputs.tagName }}
           base: main
           title: v${{ github.event.inputs.tagName }} into main
-          reviewers: ${{ github.event.issue.user.login }}
           body: |
             Hi!
             This PR was created in response workflow running.
@@ -53,7 +52,6 @@ jobs:
           head: release/v${{ github.event.inputs.tagName }}
           base: develop
           title: v${{ github.event.inputs.tagName }} into develop
-          reviewers: ${{ github.event.issue.user.login }}
           body: |
             Hi!
             This PR was created in response workflow running.
