@@ -45,3 +45,6 @@ jobs:
             Hi!
             This PR was created in response workflow running.
             I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
+            Please review and merge.
+            draft: false
+            labels: release
