@@ -1,3 +1,5 @@
+apply from: 'app_versions.gradle'
+
 buildscript {
     repositories {
         google()
