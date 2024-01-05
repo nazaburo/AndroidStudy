@@ -3,7 +3,7 @@ kotlin = '1.6.10'
 
 hilt = '2.40.5'
 compose = '1.1.0'
-lifecycle = '2.4.1'
+lifecycle = '2.6.0'
 accompanist = '0.16.0'
 
 jacoco = '0.8.7'
