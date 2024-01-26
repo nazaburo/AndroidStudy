@@ -10,10 +10,6 @@ on:
         description: 'Version number (50500)'
         required: true
 
-permissions:
-  contents: read
-  actions: write
-
 jobs:
   createRelease:
     runs-on: ubuntu-latest
@@ -21,10 +17,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-
-      - uses: rhosys/github-action-rebuild-pull-requests@v1.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create release branch
         run: git checkout -b release/v${{ github.event.inputs.tagName }}
