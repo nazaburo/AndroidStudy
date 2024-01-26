@@ -2,7 +2,7 @@ name: Deploy Flow
 on:
   push:
     tags:
-      - 'v*'
+      - 'v**'
 
 jobs:
   build:
