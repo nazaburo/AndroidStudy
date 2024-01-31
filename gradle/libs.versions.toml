@@ -12,7 +12,7 @@ jacoco = '0.8.7'
 android-pluginGradle = 'com.android.tools.build:gradle:7.1.1'
 kotlin-pluginGradle = { module = 'org.jetbrains.kotlin:kotlin-gradle-plugin', version.ref = 'kotlin' }
 hilt-pluginGradle = { module = 'com.google.dagger:hilt-android-gradle-plugin', version.ref = 'hilt' }
-detect-pluginGradle = 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.19.0'
+detect-pluginGradle = 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.5'
 google-services-pluginGradle = 'com.google.gms:google-services:4.3.10'
 jacoco-pluginGradle = { module = 'org.jacoco:org.jacoco.core', version.ref = 'jacoco' }
 
