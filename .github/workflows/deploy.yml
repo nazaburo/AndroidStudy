@@ -1,8 +1,9 @@
 name: Deploy Flow
 on:
+  workflow_dispatch:
   push:
     tags:
-      - '*'
+      - 'v**'
 
 jobs:
   build:
