@@ -15,5 +15,5 @@ jobs:
         if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
       - run: echo "name=$DISTRIBUTION_NAME"
       - run: |
-          BRANCH_NAME=${GITHUB_REF#refs/heads/}
-          echo $BRANCH_NAME | tr '[:lower:]' '[:upper:]'
+          BRANCH_NAME='${GITHUB_REF#refs/heads/}  | tr '[:lower:]' '[:upper:]'
+          echo $BRANCH_NAME'
