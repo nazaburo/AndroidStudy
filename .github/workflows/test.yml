@@ -14,4 +14,4 @@ jobs:
       - run: echo "DISTRIBUTION_NAME=$(echo ${$GITHUB_REF})" >> $GITHUB_ENV
         if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
       - run: echo "name=$DISTRIBUTION_NAME"
-      - run: echo "repository=${{ github.ref_name | upper }}"
+      - run: echo "repository=${{ github.ref_name | tr '[:lower:]' '[:upper:]' }}"
