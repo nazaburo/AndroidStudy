@@ -6,7 +6,7 @@ compose = '1.1.0'
 lifecycle = '2.4.1'
 accompanist = '0.16.0'
 
-jacoco = '0.8.7'
+jacoco = '0.8.11'
 
 [libraries]
 android-pluginGradle = 'com.android.tools.build:gradle:7.1.1'
