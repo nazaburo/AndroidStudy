@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-        with:
-          ssh-key: "${{ secrets.COMMIT_KEY }}"
 
       - name: Initialize mandatory git config
         run: |
